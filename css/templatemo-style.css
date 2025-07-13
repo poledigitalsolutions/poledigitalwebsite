@@ -505,33 +505,68 @@ img
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevent wrapping */
   gap: 40px;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .footer-column {
   flex: 1;
-  min-width: 250px;
+  min-width: 180px;
 }
 
 .footer-column h4 {
   font-weight: bold;
   margin-bottom: 20px;
+  font-size: 16px;
+  color: #000;
 }
 
-.footer-column p {
-  margin: 8px 0;
+/* Opening Hours styling */
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
 }
 
-.footer-column span {
-  float: right;
-  font-weight: 600;
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Links Styling */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #28a7e9;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 16px;
 }
 
 .social-icons a {
   font-size: 18px;
-  color: #333;
-  margin-right: 12px;
+  color: #000;
   transition: color 0.3s ease;
 }
 
@@ -539,12 +574,32 @@ img
   color: #28a7e9;
 }
 
+/* Footer Bottom */
 .footer-bottom {
   text-align: center;
   padding-top: 30px;
   color: #666;
   font-size: 14px;
 }
+
+/* Responsive Layout */
+@media screen and (max-width: 900px) {
+  .footer-wrapper {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-column {
+    flex: 1 1 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-column {
+    flex: 1 1 100%;
+  }
+}
+
 
 /* end footer */
 
@@ -589,3 +644,60 @@ img
 
 
 /* end media 360 */
+
+/* start my work */
+
+.work-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #222;
+}
+
+.work-box {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.work-subheading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.video-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.work-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.work-credit {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* end my work */

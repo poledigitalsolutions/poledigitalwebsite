@@ -121,27 +121,8 @@
     }
   </script>
 
-    <script>
-  new Swiper('.website-swiper', {
-    navigation: {
-      nextEl: '.website-swiper .swiper-button-next',
-      prevEl: '.website-swiper .swiper-button-prev',
-    },
-    loop: true,
-  });
 
-  new Swiper('.pos-swiper', {
-    navigation: {
-      nextEl: '.pos-swiper .swiper-button-next',
-      prevEl: '.pos-swiper .swiper-button-prev',
-    },
-    loop: true,
-  });
-</script>
-
-
-    
-        <!-- start preloader -->
+          <!-- start preloader -->
         <div class="preloader">
             <div class="sk-spinner sk-spinner-rotating-plane"></div>
          </div>
@@ -166,7 +147,7 @@
                            <li><a href="#feature">About</a></li>
                            <li><a href="#work">My Work</a></li>
                            <li><a href="#pricing">Pricing</a></li>
-                           <li><a href="#reviews">Reviews</a></li>
+                           <li><a href="#reviews">Testimonials</a></li>
                            <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -256,29 +237,31 @@
         </section>
         <!-- end feature1 -->
 
-<!-------------Work  --------------------------------->
-         <!-- Website Video Showcase -->
-<section id="work">
-<div class="work-box" style="flex: 1 1 400px; max-width: 500px; margin: 0 auto;">
-  <h2 style="text-align: center; margin-bottom: 20px;">Websites</h2>
+<!-------------------------------------------------    My Work  ------------------------------------------------------->
+<section id="work" class="work-section">
+  <div class="container">
+    <h2 class="section-heading">My Work</h2>
 
-  <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <video
-      width="100%"
-      height="auto"
-      controls
-      playsinline 
-      style="display: block; width: 100%; border-radius: 12px;">
-      <source src="images/website.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="work-box">
+      <h3 class="work-subheading">Websites</h3>
+
+      <div class="video-wrapper">
+        <video
+          controls
+          playsinline
+          class="work-video">
+          <source src="images/website.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p class="work-credit">
+        Designed and developed by <strong>Pole Digital Solution</strong>
+      </p>
+    </div>
   </div>
-
-  <p style="text-align: center; margin-top: 12px;">
-    Designed and developed by <strong>Pole Digital Solution</strong>
-  </p>
-</div>
 </section>
+
 
 
         <!-- start pricing -->
@@ -465,47 +448,74 @@
         <!-----end of contact ----->
 
         <!------start of footer-->
-    
-    <footer class="footer-section">
+                
+        <footer class="footer-section">
   <div class="container footer-wrapper">
+
+    <!-- Opening Hours -->
     <div class="footer-column">
       <h4>Opening Hours</h4>
-      <p>Monday - Friday<span>9:00  - 18:00</span></p>
-      <p>Saturday<span>10:30  - 17:30 </span></p>
-      <p>Sunday  <span>Closed</span></p>
-    </div>
-
-    <div class="footer-column">
-      <h4></h4>
-      <p></p>
-      <p><br></p>
-    </div>
-
-  <div class="footer-column">
-  <h4>Socials</h4>
-  <div class="social-icons">
-    <!-- WhatsApp: opens chat with your number -->
-    <a href="https://wa.me/447404648531" target="_blank" rel="noopener">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Instagram: opens your profile -->
-    <a href="https://www.instagram.com/pole_digital_solutions/" target="_blank" rel="noopener">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
-</div>
-
-       
+      <div class="hours-list">
+        <div class="hours-row">
+          <span>Mon - Fri</span><span>9:00 - 18:00</span>
+        </div>
+        <div class="hours-row">
+          <span>Saturday</span><span>10:30 - 17:30</span>
+        </div>
+        <div class="hours-row">
+          <span>Sunday</span><span>Closed</span>
+        </div>
       </div>
     </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#feature">About</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#reviews">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal Links -->
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="tac.html">Terms & Conditions</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-column">
+      <h4>Socials</h4>
+      <div class="social-icons">
+        <a href="https://wa.me/447404648531" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/pole_digital_solutions/" target="_blank" rel="noopener">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        
+        <a href="https://www.linkedin.com/company/pole-digital-solutions/" target="_blank" rel="noopener">
+           <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <div class="footer-bottom">
-    <p>Copyright © Pole Digital Solutions 2025</p>
-   
+    <p>&copy; Pole Digital Solutions 2025</p>
   </div>
 </footer>
+
 
 
 
