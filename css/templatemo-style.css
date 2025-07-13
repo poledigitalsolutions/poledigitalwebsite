@@ -189,25 +189,36 @@ img
 /* start home */       
 #home {
   position: relative;
-  background: url('../images/home-bg.png') no-repeat center center;
-  background-size: cover; /* fills the container */
-  color: #fff;
-  min-height: 100vh;
+  width: 100%;
+  /* height will be controlled by the image inside */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px 20px;
-  box-sizing: border-box;
   text-align: center;
-  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white; /* fallback background */
+}
+
+#home .hero-bg {
+  width: 100%;
+  height: auto; /* maintain aspect ratio */
+  display: block; /* remove inline gap */
+  max-width: 100%;
+  user-select: none;
 }
 
 #home .content-wrapper {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 700px;
-  width: 100%;
+  width: 90%;
+  color: #fff;
+  z-index: 1;
   padding: 0 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 #home h1 {
@@ -215,8 +226,6 @@ img
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -226,7 +235,6 @@ img
   line-height: 1.8em;
   font-size: 1.25rem;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
 }
 
 #home .btn-primary {
@@ -247,29 +255,13 @@ img
 }
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
-  #home {
-    padding: 60px 15px;
-  }
-
-  #home h1 {
-    font-size: 2.8rem;
-  }
-
-  #home p {
-    font-size: 1.1rem;
-  }
-}
-
 @media (max-width: 768px) {
-  #home {
-    min-height: 75vh;
-    padding: 50px 15px;
-    background-position: center top;
+  #home .content-wrapper {
+    max-width: 90%;
   }
-
+  
   #home h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   #home p {
@@ -279,16 +271,6 @@ img
   #home .btn-primary {
     padding: 12px 28px;
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #home h1 {
-    font-size: 1.8rem;
-  }
-
-  #home p {
-    font-size: 0.9rem;
   }
 }
 
