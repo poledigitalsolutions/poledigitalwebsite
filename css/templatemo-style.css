@@ -200,15 +200,14 @@ img
     padding: 70px 20px;
     box-sizing: border-box;
     text-align: center;
+    flex-direction: column; /* stack content vertically for mobile */
 }
-
-
 
 #home .content-wrapper {
     position: relative;
     z-index: 1;
     max-width: 700px;
-    /* No background or padding here */
+    width: 100%;
 }
 
 #home h1 {
@@ -216,7 +215,7 @@ img
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.9); /* strong shadow for clarity */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
@@ -243,20 +242,37 @@ img
     box-shadow: 0 4px 15px #07032b;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  padding: 2rem;
-  background: #f5f5f5;
-}
-
 #home .btn-primary:hover {
     background-color: #071956;
 }
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+    #home {
+        min-height: 70vh; /* smaller height on mobiles */
+        padding: 50px 15px;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    #home .btn-primary {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    #home .content-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
 
 /* end home */
 
