@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Pole Digital Solutions</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
 
@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+ 
 
     <!-- Add this inside the <head> -->
     <link
@@ -34,37 +40,104 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Swiper CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  </head>
+  <body>
+
+      <style>
+  .swiper-slide .review-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* Highlight the active slide */
+  .swiper-slide-active .review-box {
+    background: #003366; /* Dark blue */
+    color: #fff;
+  }
+
+  /* Keep stars yellow in all states */
+  .review-box .stars {
+    color: #FFD700; /* Gold/Yellow */
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Ensure other text turns white only in active slide */
+  .swiper-slide-active .review-box .title,
+  .swiper-slide-active .review-box p {
+    color: #fff;
+  }
+</style>
 
 
 
-    <!-- Google Reviews Rich Snippet JSON-LD -->
-    <script type="application/ld+json">
+    <script>
+  var reviewSwiper = new Swiper('.review-swiper', {
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    spaceBetween: 30,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    }
+  });
+</script>
+
+        <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Pole Digital Solutions",
-      "image": "https://yourdomain.com/images/logo.png",
+      "image": "https://poledigitalsolutions.vercel.app/images/logo.png",
       "telephone": "+44 7404648531",
       "email": "poledigitalsolutions@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "",
+        "streetAddress": "Coventry Road",
         "addressLocality": "Ilford",
         "addressRegion": "",
-        "postalCode": "",
+        "postalCode": "IG1 4RD",
         "addressCountry": "GB"
       },
-      "url": "https://yourdomain.com",
+      "url": "https://poledigitalsolutions.vercel.app/",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.7",
-        "reviewCount": "35"
+        "reviewCount": "5"
       }
     }
-    </script>
+  </script>
 
-  </head>
-  <body>
+    <script>
+  new Swiper('.website-swiper', {
+    navigation: {
+      nextEl: '.website-swiper .swiper-button-next',
+      prevEl: '.website-swiper .swiper-button-prev',
+    },
+    loop: true,
+  });
+
+  new Swiper('.pos-swiper', {
+    navigation: {
+      nextEl: '.pos-swiper .swiper-button-next',
+      prevEl: '.pos-swiper .swiper-button-prev',
+    },
+    loop: true,
+  });
+</script>
 
 
     
@@ -85,33 +158,28 @@
                         <span class="icon icon-bar"></span>
                         <span class="icon icon-bar"></span>
                     </button>
-                    <img src="images/logo.png" alt="Pole Digital Solutions" style="height: 60px;">
+                   
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right text-uppercase">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#feature">About</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <ul class="nav navbar-nav navbar-middle text-uppercase">
+                           <li><a href="#home">Home</a></li>
+                           <li><a href="#feature">About</a></li>
+                           <li><a href="#work">My Work</a></li>
+                           <li><a href="#pricing">Pricing</a></li>
+                           <li><a href="#reviews">Reviews</a></li>
+                           <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- end navigation -->
 
-
-
-
         <!-- start home -->
     <section id="home">
   <div class="content-wrapper">
-    <h1 class="text-upper">Pole Digital Solutions</h1>
-    <p>Build Your Brand with Expert Digital Solutions. From sleek websites to professional logos, we make your online presence unforgettable.</p>
-    <button class="btn-primary">Get Started</button>
+    <h1 class="text-upper"></h1>
   </div>
 </section>
-
         <!-- end home -->
 
 
@@ -146,13 +214,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s">
-                        <h2 class="text-uppercase">About Our Services</h2>
-                        <p>We help small businesses and entrepreneurs grow their online presence with smart, affordable digital solutions.
-                           Whether you need a modern website, a customized POS (Point of Sale) system, or a clean digital portfolio to showcase your work—we have got you covered.What makes us different? 
-                           We focus on simplicity, clarity, and support. Our services are designed to be 
+                        <h2 class="text-uppercase">About My Services</h2>
+                        <p>I help small businesses and entrepreneurs grow their online presence with smart, affordable digital solutions.
+                           Whether you need a modern website, a customized POS (Point of Sale) system, or a clean digital portfolio to showcase your work— I have got you covered.What makes me different? 
+                           I focus on simplicity, clarity, and support. My services are designed to be 
                            cost-effective and easy to maintain, even for non-technical clients. Plus,
-                           we offer ongoing support, updates, and optional hosting setup so you can stay focused on running your business.</p>
-                        <p>Let us handle the digital side—while you focus on what you do best.</p>
+                           I offer ongoing support, updates, and optional hosting setup so you can stay focused on running your business.</p>
+                        <p>Let me handle the digital side—while you focus on what you do best.</p>
                     </div>
                     <div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
                         <img src="images/software-img.png" class="img-responsive" alt="feature img">
@@ -170,14 +238,14 @@
                         <img src="images/mission.png" class="img-responsive" alt="feature img">
                     </div>
                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <h2 class="text-uppercase">OUR MISSION</h2>
+                        <h2 class="text-uppercase">My MISSION</h2>
                         <p>To provide innovative, accessible, and affordable digital solutions that enable small businesses and entrepreneurs to thrive in the digital world.</p>
-                        <h2 class="text-uppercase">OUR VISION</h2>
+                        <h2 class="text-uppercase">My VISION</h2>
                         <p>To be a trusted partner in the digital growth journey of every small business by delivering high-quality, user-friendly technology and exceptional customer support.</p>
-                        <h2 class="text-uppercase">OUR VALUES</h2>
-                        <p><strong>Simplicity:</strong> We believe technology should be easy to use and understand.</p>
+                        <h2 class="text-uppercase">My VALUES</h2>
+                        <p><strong>Simplicity:</strong> I believe technology should be easy to use and understand.</p>
                         <p><strong>Affordability:</strong> Quality digital solutions shouldn’t break the bank.</p>
-                        <p><strong>Support:</strong> We stand by our clients with ongoing help and guidance.</p>
+                        <p><strong>Support:</strong> I stand by our clients with ongoing help and guidance.</p>
                         <p><strong>Innovation:</strong> Continuously improving to meet evolving digital needs.</p>
                         <p><strong>Integrity:</strong> Transparency and honesty in every project we undertake.</p>
 
@@ -188,12 +256,37 @@
         </section>
         <!-- end feature1 -->
 
+<!-------------Work  --------------------------------->
+         <!-- Website Video Showcase -->
+<section id="work">
+<div class="work-box" style="flex: 1 1 400px; max-width: 500px; margin: 0 auto;">
+  <h2 style="text-align: center; margin-bottom: 20px;">Websites</h2>
+
+  <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <video
+      width="100%"
+      height="auto"
+      controls
+      playsinline 
+      style="display: block; width: 100%; border-radius: 12px;">
+      <source src="images/website.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <p style="text-align: center; margin-top: 12px;">
+    Designed and developed by <strong>Pole Digital Solution</strong>
+  </p>
+</div>
+</section>
+
+
         <!-- start pricing -->
         <section id="pricing">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 wow bounceIn">
-                        <h2 class="text-uppercase">Our Pricing</h2>
+                        <h2 class="text-uppercase">Pricing</h2>
                     </div>
                     <div class="col-md-4 wow fadeIn" data-wow-delay="0.6s">
                         <div class="pricing text-uppercase">
@@ -268,33 +361,35 @@
         <!-- end pricing -->
 
 <!-----Start Testimonials --------->
-       <section id="reviews" style="padding: 60px 0; text-align: center; background: #f9f9f9;">
-         <h2 style="font-size: 32px; margin-bottom: 40px;">Our Reviews</h2>
+                <section id="reviews" style="padding: 60px 0; text-align: center; background: #f9f9f9;">
+  <h2 style="font-size: 32px; margin-bottom: 40px;">Testimonials</h2>
 
-            <div class="swiper-container review-swiper" style="max-width: 800px; margin: 0 auto;">
-               <div class="swiper-wrapper">
+  <div class="swiper review-swiper" style="max-width: 800px; margin: 0 auto; position: relative;">
+    <div class="swiper-wrapper">
 
       <!-- Slide 1 -->
-                <div class="swiper-slide review-slide">
-                   <div class="review-box">
-                   <div class="stars">★★★★★</div>
-                   <strong class="title">Excellent POS Software!</strong>
-                   <p>We got a complete POS system built for our fisheries business in Ghana. It works perfectly, is easy to use, and meets all our needs. Highly professional work!</p>
-                   <p><strong>Kranthi Kumar</strong></p>
-                   </div>
-                   </div>
+      <div class="swiper-slide">
+        <div class="review-box">
+          <div class="stars">★★★★★</div>
+          <strong class="title">Excellent POS Software!</strong>
+          <p>We got a complete POS system built for our fisheries business in Ghana. It works perfectly, is easy to use, and meets all our needs. Highly professional work!</p>
+          <p><strong>Kranthi Kumar</strong></p>
+        </div>
+      </div>
 
       <!-- Slide 2 -->
-                <div class="swiper-slide review-slide">
-                   <div class="review-box">
-                   <div class="stars">★★★★☆</div>
-                   <strong class="title">Great Website Design</strong>
+      <div class="swiper-slide">
+        <div class="review-box">
+          <div class="stars">★★★★☆</div>
+          <strong class="title">Great Website Design</strong>
           <p>The website built for our import-export company looks very professional and has helped us reach more clients internationally. Quick delivery too!</p>
           <p><strong>Akhil Kumar</strong></p>
         </div>
       </div>
 
-      <!-- Slide 3 -->
+      <!-- Add more slides as needed... -->
+
+            <!-- Slide 3 -->
       <div class="swiper-slide review-slide">
         <div class="review-box">
           <div class="stars">★★★★★</div>
@@ -326,11 +421,11 @@
 
     </div>
 
-                         <!-- Arrows -->
-                          <div class="swiper-button-next"></div>
-                          <div class="swiper-button-prev"></div>
-                          </div>
-        </section>
+    <!-- Navigation buttons INSIDE the container -->
+    <div class="swiper-button-next" style="color:#000;"></div>
+    <div class="swiper-button-prev" style="color:#000;"></div>
+  </div>
+</section>
 
 
         <!-- end Testimonials -->
@@ -341,10 +436,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-          <h2 class="text-uppercase">Contact Us</h2>
+          <h2 class="text-uppercase">Contact Me</h2>
           <p>
-            We’d love to hear from you! Whether you have questions about our services, want a free consultation,
-            or need support, feel free to get in touch. Our team at Pole Digital Solutions is here to help your business succeed online.
+            I would love to hear from you! Whether you have questions about my services, want a free consultation,
+            or need support, feel free to get in touch. Pole Digital Solutions is here to help your business succeed online.
           </p>
 
           <address>
