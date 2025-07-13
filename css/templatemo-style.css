@@ -189,88 +189,83 @@ img
 /* start home */       
 
 #home {
-    position: relative;
-    background: url('../images/home-bg.png') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 70px 20px;
-    box-sizing: border-box;
-    text-align: center;
-    flex-direction: column; /* stack content vertically for mobile */
+  position: relative;
+  background: url('../images/home-bg.png') no-repeat center center;
+  background-size: cover; /* default desktop */
+  background-color: #000; /* fallback background color */
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 #home .content-wrapper {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    width: 100%;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  /* No background or padding here */
 }
 
 #home h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9); /* strong shadow for clarity */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 #home p {
-    font-weight: 400;
-    font-style: italic;
-    line-height: 1.8em;
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.8em;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
 }
 
 #home .btn-primary {
-    background-color: #0a0346;
-    color: white;
-    font-weight: 600;
-    padding: 14px 32px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 15px #07032b;
+  background-color: #0a0346;
+  color: white;
+  font-weight: 600;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 15px #07032b;
 }
 
 #home .btn-primary:hover {
-    background-color: #071956;
+  background-color: #071956;
 }
 
-/* Responsive tweaks */
-@media (max-width: 767px) {
-    #home {
-        min-height: 70vh; /* smaller height on mobiles */
-        padding: 50px 15px;
-    }
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #home {
+    background-size: contain;
+    background-position: top center;
+    min-height: 70vh;
+  }
 
-    #home h1 {
-        font-size: 2.5rem;
-    }
+  #home h1 {
+    font-size: 2.5rem;
+  }
 
-    #home p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
+  #home p {
+    font-size: 1rem;
+  }
 
-    #home .btn-primary {
-        padding: 12px 24px;
-        font-size: 1rem;
-    }
-
-    #home .content-wrapper {
-        max-width: 100%;
-        padding: 0 10px;
-    }
+  #home .btn-primary {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
 }
 
 
