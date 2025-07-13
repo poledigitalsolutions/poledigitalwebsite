@@ -190,7 +190,7 @@ img
 #home {
   position: relative;
   background: url('../images/home-bg.png') no-repeat center center;
-  background-size: cover;
+  background-size: cover; /* fills the container */
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -206,6 +206,8 @@ img
   position: relative;
   z-index: 1;
   max-width: 700px;
+  width: 100%;
+  padding: 0 15px;
 }
 
 #home h1 {
@@ -245,15 +247,29 @@ img
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   #home {
-    background-position: top center;
-    min-height: 75vh;
-    padding: 50px 15px;
+    padding: 60px 15px;
   }
 
   #home h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+
+  #home p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+    min-height: 75vh;
+    padding: 50px 15px;
+    background-position: center top;
+  }
+
+  #home h1 {
+    font-size: 2.2rem;
   }
 
   #home p {
@@ -263,6 +279,16 @@ img
   #home .btn-primary {
     padding: 12px 28px;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #home h1 {
+    font-size: 1.8rem;
+  }
+
+  #home p {
+    font-size: 0.9rem;
   }
 }
 
